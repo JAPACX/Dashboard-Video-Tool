@@ -17,17 +17,46 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: "#ECF0F1";
+  height: 100vh;
+  background: "#ECF0F1";
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.primary-color {
+  color: #4702ff;
+}
+
+.secondary-color {
+  color: #7700f5;
+}
+
+.neutral-black {
+  color: #263238;
+}
+
+.neutral-grey {
+  color: "#ECF0F1";
+}
+
+.neutral-white {
+  color: "#FDFEFE";
+}
+
+.neutral-grey {
+  color: "#ECF0F1";
+}
+
+p {
+  color: #263238;
+}
+
+h1 {
+  color: #263238;
+  font-family: "Inter", sans-serif;
 }
