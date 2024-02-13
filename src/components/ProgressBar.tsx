@@ -1,15 +1,20 @@
 import React from "react";
-import { Progress } from "antd";
 
-const ProgressBar: React.FC<{ percent: number; showInfo?: boolean }> = ({
+export const ProgressBar: React.FC<{ percent: number; title: string }> = ({
   percent,
-  showInfo,
+  title,
 }) => {
+  const barWidth = `${percent}%`;
+
   return (
-    <>
-      <Progress percent={50} showInfo={showInfo} />
-    </>
+    <div className="flex flex-col w-full">
+      <p className="text-sm">{title}</p>
+      <div className="h-[10px] relative w-full bg-[#7E4EFF] rounded">
+        <div
+          className=" h-[10px] bg-[#4702FF] rounded"
+          style={{ width: barWidth }}
+        ></div>
+      </div>
+    </div>
   );
 };
-
-export default ProgressBar;
