@@ -19,7 +19,7 @@ export const ItemPanel: React.FC<PanelItemProps> = ({
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 1 }}
+      whileTap={{ scale: 0.8 }}
       className={`flex items-center hover:bg-[#dbdbdb] py-[10px] rounded-xl px-[10px] cursor-pointer focus:bg-[#4702ff] `}
       onClick={onClick}
     >

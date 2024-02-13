@@ -16,7 +16,7 @@ export const MyPlan = () => {
         </div>
         <motion.div
           whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 1 }}
+          whileTap={{ scale: 0.8 }}
           className="bg-[#4702FF] h-[35px]  mt-[40px] p-[3px] rounded-3xl flex justify-center items-center"
         >
           <p className="text-white cursor-pointer">Administrar plan</p>
