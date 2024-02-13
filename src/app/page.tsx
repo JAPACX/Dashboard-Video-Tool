@@ -1,6 +1,6 @@
 import Panel from "@/app/[user]/dashboard/panel/panel";
 import Dashboard from "@/app/[user]/dashboard/page";
-
+import { Sidebar } from "@/components/SideBar";
 export default function Home() {
   return (
     <div className="flex justify-center h-full bg-[#ECF0F1] ">
@@ -10,8 +10,10 @@ export default function Home() {
             <Panel />
           </div>
           <div className="col-span-3 md:col-span-2">
-            {/* <Dashboard /> */}
-            <Panel />
+            <Sidebar>
+              <Panel />
+            </Sidebar>
+            <Dashboard />
           </div>
         </div>
       </div>
