@@ -95,16 +95,4 @@ const Fakedata = [
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
-  {
-    title: "Video 7",
-    icon: "img",
-    size: "23.5 GB",
-    lastModified: "3-may-23",
-  },
-  {
-    title: "Video 8",
-    icon: "img",
-    size: "23.5 GB",
-    lastModified: "3-may-23",
-  },
 ];
