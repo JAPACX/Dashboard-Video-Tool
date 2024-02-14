@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { SearchBar } from "@/components";
+import { DynamicSearch } from "@/components";
 import Videos from "@/app/[user]/dashboard/components/Videos";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -74,8 +74,11 @@ const Dashboard = () => {
                 </motion.div>
               </div>
             </div>
-            <div>
-              <SearchBar />
+            <div className="px-[10px]">
+              <DynamicSearch
+                customConditionInPath="custom-condition-in-path"
+                searchTerms={[{ key: "title", value: "Video" }]}
+              />
             </div>
             <div className="justify-center grid grid-cols-5 border-b-[1px] mt-[30px] px-[10px]">
               <p className="col-span-2 font-semibold">Nombre</p>
@@ -87,7 +90,7 @@ const Dashboard = () => {
               </p>
             </div>
 
-            <div className="max-h-[600px] overflow-y-auto">
+            <div className="max-h-[600px] md:max-h-[480px] overflow-y-auto">
               {data.map((data, index) => (
                 <Videos
                   key={index}
@@ -111,105 +114,105 @@ export default Dashboard;
 const data = [
   {
     icon: folderImg,
-    title: "Video 1",
+    title: "Afiliado M.",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
   {
     icon: folderImg,
-    title: "Video 2",
+    title: "Afiliado M.",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
   {
     icon: folderImg,
-    title: "Video 3",
+    title: "Afiliado M.",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
   {
     icon: folderImg,
-    title: "Video 4",
+    title: "Afiliado M.",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
   {
     icon: folderImg,
-    title: "Video 5",
+    title: "Afiliado M.",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
   {
     icon: folderImg,
-    title: "Video 6",
+    title: "Afiliado M.",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
   {
     icon: folderImg,
-    title: "Video 7",
+    title: "Afiliado M.",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
   {
     icon: folderImg,
-    title: "Video 8",
+    title: "Afiliado M.",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
   {
     icon: folderImg,
-    title: "Video 9",
+    title: "Afiliado M.",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
   {
     icon: folderImg,
-    title: "Video 7",
+    title: "Afiliado M.",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
   {
     icon: folderImg,
-    title: "Video 8",
+    title: "Afiliado M.",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
   {
     icon: folderImg,
-    title: "Video 9",
+    title: "Afiliado M.",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
   {
     icon: folderImg,
-    title: "Video 7",
+    title: "Afiliado M.",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
   {
     icon: folderImg,
-    title: "Video 8",
+    title: "Afiliado M.",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
   {
     icon: folderImg,
-    title: "Video 9",
+    title: "Afiliado M.",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",

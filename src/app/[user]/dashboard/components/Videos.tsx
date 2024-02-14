@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 interface Props {
   title: string;
   icon: any;
@@ -16,7 +18,11 @@ const Videos: React.FC<Props> = ({
   lastModified,
 }: Props) => {
   return (
-    <div className="justify-center grid grid-cols-5 border-b-[1px] mt-[30px] px-[10px]">
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.9 }}
+      className="justify-center grid grid-cols-5 border-b-[1px] mt-[30px] px-[10px] hover:bg-[#dbdbdb] cursor-pointer"
+    >
       <div className="col-span-2 flex justify-start">
         <input
           type="checkbox"
@@ -29,7 +35,7 @@ const Videos: React.FC<Props> = ({
       <p className="col-span-1 flex items-center">{amount}</p>
       <p className="col-span-1 flex items-center">{size}</p>
       <p className="col-span-1 flex items-center">{lastModified}</p>
-    </div>
+    </motion.div>
   );
 };
 

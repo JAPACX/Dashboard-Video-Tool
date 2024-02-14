@@ -1,2 +1,2 @@
-export { SearchBar } from "./SearchBar";
 export { ProgressBar } from "./ProgressBar";
+export { DynamicSearch } from "./SearchBarDynamic";
