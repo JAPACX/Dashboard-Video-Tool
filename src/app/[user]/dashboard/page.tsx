@@ -11,7 +11,12 @@ import trashImg from "@/assets/trash.png";
 
 const Dashboard = () => {
   return (
-    <div className="flex justify-center w-full items-center h-full  px-[10px]">
+    <motion.div
+      initial={{ x: 1200 }}
+      animate={{ x: 0 }}
+      transition={{ duration: 0.7, ease: "easeInOut" }}
+      className="flex justify-center w-full items-center h-full  px-[10px]"
+    >
       <div className="bg-white flex justify-center items-center w-full h-[95%] rounded-xl">
         <div className="flex w-full h-full">
           <div className="flex flex-col w-full">
@@ -20,7 +25,7 @@ const Dashboard = () => {
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.8 }}
-                  className="flex cursor-pointer hover:bg-[#dbdbdb] p-[10px] rounded-xl items-center"
+                  className="flex cursor-pointer hover:bg-[#e9e8e8] focus:bg-[#dbdbdb] p-[10px] rounded-xl items-center"
                 >
                   <Image
                     src={bookImg}
@@ -32,7 +37,7 @@ const Dashboard = () => {
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.8 }}
-                  className="flex cursor-pointer hover:bg-[#dbdbdb] p-[10px] rounded-xl items-center"
+                  className="flex cursor-pointer hover:bg-[#e9e8e8] focus:bg-[#dbdbdb] p-[10px] rounded-xl items-center"
                 >
                   <Image
                     src={trashImg}
@@ -46,7 +51,7 @@ const Dashboard = () => {
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.8 }}
-                  className="flex  justify-center items-center cursor-pointer  hover:bg-[#dbdbdb] p-[10px] rounded-xl"
+                  className="flex  justify-center items-center cursor-pointer  hover:bg-[#e9e8e8] focus:bg-[#dbdbdb] p-[10px] rounded-xl"
                 >
                   <Image
                     src={folderImg}
@@ -58,7 +63,7 @@ const Dashboard = () => {
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.8 }}
-                  className="flex  justify-center items-center cursor-pointer hover:bg-[#dbdbdb] p-[10px] rounded-xl"
+                  className="flex  justify-center items-center cursor-pointer hover:bg-[#e9e8e8] focus:bg-[#dbdbdb] p-[10px] rounded-xl"
                 >
                   <Image
                     src={playerImg}
@@ -82,19 +87,22 @@ const Dashboard = () => {
               </p>
             </div>
 
-            {data.map((data) => (
-              <Videos
-                key={data.title}
-                title={data.title}
-                amount={data.amount}
-                size={data.size}
-                lastModified={data.lastModified}
-              />
-            ))}
+            <div className="max-h-[600px] overflow-y-auto">
+              {data.map((data, index) => (
+                <Videos
+                  key={index}
+                  icon={data.icon}
+                  title={data.title}
+                  amount={data.amount}
+                  size={data.size}
+                  lastModified={data.lastModified}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -102,37 +110,106 @@ export default Dashboard;
 
 const data = [
   {
+    icon: folderImg,
     title: "Video 1",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
   {
+    icon: folderImg,
     title: "Video 2",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
   {
+    icon: folderImg,
     title: "Video 3",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
   {
+    icon: folderImg,
     title: "Video 4",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
   {
+    icon: folderImg,
     title: "Video 5",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",
   },
   {
+    icon: folderImg,
     title: "Video 6",
+    amount: 8,
+    size: "23.5 GB",
+    lastModified: "3-may-23",
+  },
+  {
+    icon: folderImg,
+    title: "Video 7",
+    amount: 8,
+    size: "23.5 GB",
+    lastModified: "3-may-23",
+  },
+  {
+    icon: folderImg,
+    title: "Video 8",
+    amount: 8,
+    size: "23.5 GB",
+    lastModified: "3-may-23",
+  },
+  {
+    icon: folderImg,
+    title: "Video 9",
+    amount: 8,
+    size: "23.5 GB",
+    lastModified: "3-may-23",
+  },
+  {
+    icon: folderImg,
+    title: "Video 7",
+    amount: 8,
+    size: "23.5 GB",
+    lastModified: "3-may-23",
+  },
+  {
+    icon: folderImg,
+    title: "Video 8",
+    amount: 8,
+    size: "23.5 GB",
+    lastModified: "3-may-23",
+  },
+  {
+    icon: folderImg,
+    title: "Video 9",
+    amount: 8,
+    size: "23.5 GB",
+    lastModified: "3-may-23",
+  },
+  {
+    icon: folderImg,
+    title: "Video 7",
+    amount: 8,
+    size: "23.5 GB",
+    lastModified: "3-may-23",
+  },
+  {
+    icon: folderImg,
+    title: "Video 8",
+    amount: 8,
+    size: "23.5 GB",
+    lastModified: "3-may-23",
+  },
+  {
+    icon: folderImg,
+    title: "Video 9",
     amount: 8,
     size: "23.5 GB",
     lastModified: "3-may-23",

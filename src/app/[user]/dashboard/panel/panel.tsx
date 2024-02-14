@@ -43,7 +43,7 @@ const Panel = () => {
     <motion.div
       initial={{ x: -900 }}
       animate={{ x: 0 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
+      transition={{ duration: 0.7, ease: "easeInOut" }}
       className="flex justify-center items-center h-full"
     >
       <div className="bg-white flex justify-center items-center w-[90%] h-[95%] rounded-xl">
