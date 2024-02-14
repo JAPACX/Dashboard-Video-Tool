@@ -1,7 +1,9 @@
+"use client";
 import Panel from "@/app/[user]/dashboard/panel/panel";
-import Dashboard from "@/app/[user]/dashboard/page";
+import Dashboard from "@/app/[user]/dashboard/dashboard";
 import { Sidebar } from "@/components/SideBar";
-export default function Home() {
+
+export default function DashboardHome() {
   return (
     <div className="flex justify-center h-full bg-[#ECF0F1] ">
       <div className="container ">
